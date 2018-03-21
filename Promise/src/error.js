@@ -1,26 +1,14 @@
-// 错误捕获
-	
+// Promise会自动捕获内部异常，并交给rejected响应函数处理-catch捕获
 
-console.log('start')
+console.log('here we go');
 new Promise( resolve => {
-	setTimeout( () => {
-		throw new Error('bad Girls')
-		console.log('yangjing') // 2 秒后执行
-		resolve('yangjing')
-	}, 2000)
+    setTimeout( () => {
+        throw new Error('bye');
+    }, 2000);
 })
-	.then(value => {
-		console.log(value + ', hello word!') // 2 秒后执行
-	})
-	.catch( err => {
-		console.log('Error: ====' + err)
-	})
-	.then(value => {
-		console.log(', hello word!aaa') // 2 秒后执行
-	})
-	.then(value => {
-		console.log(', hello word!aaa') // 2 秒后执行
-	})
-	.then(value => {
-		console.log(', hello word!aaa') // 2 秒后执行
-	})
+    .then( value => {
+        console.log( value + ' world');
+    })
+    .catch( error => {
+        console.log( 'Error：', error.message);
+    });

@@ -92,4 +92,12 @@
 */
 
 // 错误捕获
-import './src/error.js'
+// import './src/error.js'
+
+// Promise.all()
+// import './src/all.js'
+
+// Modal
+import './src/modal.js'
+
+
