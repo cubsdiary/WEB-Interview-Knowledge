@@ -1,5 +1,5 @@
 ### JS基础知识：
-
+https://www.cnblogs.com/DCL1314/p/10393121.html
 ---
 1. 变量类型和计算
     - 变量类型和计算
@@ -20,7 +20,7 @@
         - 一种js  对象
         - 一种数据格式
     - [x] typeof （只能区分值类型， 前四个，不能分辨引用类型， 能区分function)
-        
+
         ```
         typeof undefined   //  undefined
         typeof 'abc'            //  string
@@ -28,23 +28,23 @@
         typeof true 		//  boolean
         typeof {}  		//  object
         typeof []			//  object
-        typeof null 		//  object 
+        typeof null 		//  object
         typeof console.log //  function
         ```
     - [x] ==
-        
+
         ```
         100 == '100'			//  true
         0 ==  ' '				//  true
-        null ==  undefined 	//  true 
-        
+        null ==  undefined 	//  true
+
         if (obj.a ==  null)  {
         //  这里相当于 obj.a  ===  null ||  obj.a ===  undefined 简写形式
         //  这是JQuery  源码中推荐的写法 （其他全部用 === ）
-        } 
+        }
         ```
     - [x] 强制类型转换
-        
+
         ```
         '+'      '=='      'if'    '&&'  '||'    '!'  '!!'
         ```
@@ -224,9 +224,9 @@
         - 函数作用域和全局作用域
     - [x] - 作用域链
         ```
-        var  a =  100 
+        var  a =  100
         function F1  ()  {
-            var b =  10 
+            var b =  10
             function F2  ()  {
                 var c =  1
                 console.log(a,  b ,c)  //  a,  b为F2的自由变量， 会一级一级向上查询
@@ -238,7 +238,7 @@
         ```
         函数作为返回值
         function  F1  ()  {
-            var a =  100 
+            var a =  100
             //  返回一个函数
             return  function   ()  {
                 console.log(a)
@@ -246,11 +246,11 @@
         }
         //  f1 得到一个函数
         var  f1 =  F1()
-        var a =  200 
+        var a =  200
         f1()  //   100
         函数作为参数
         function  F1  ()  {
-            var a =  100 
+            var a =  100
             //  返回一个函数
             return  function   ()  {
                 console.log(a)
@@ -258,13 +258,13 @@
         }
         var f1 =  F1()
         function F2  (fn)  {
-            var a =  300 
+            var a =  300
             fn()
         }
         F2(f1)  //  100
         ```
 4. 异步和单线程
-    - 同步和异步的区别是什么？ 分别举一个同步和异步的例子 
+    - 同步和异步的区别是什么？ 分别举一个同步和异步的例子
         - 同步会阻塞代码执行， 而异步不会
         - alert是同步， setTimeout是异步
     - 一个关于setTimeout的笔试题
@@ -314,9 +314,9 @@
 			}
 		}
         ```
-    - [x] Math 
+    - [x] Math
         - Math.random()获取随机数
-    - [x] 数组API 
+    - [x] 数组API
         ```
         forEach便利所有元素
         arr.forEach(function (item, index) {
@@ -369,6 +369,3 @@
             }
         }
         ```
-
-
-
